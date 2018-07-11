@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Responsive Web Design Examples </title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<h1>Responsive Web Design Examples</h1>
+
+<p><a href="#">GitHub</a></p>
+
+<p>A small collection of simple pages that can be tested on various devices. Each page has its own stand-alone CSS file for easy copying.</p>
+
+<ul>
+	<li><a href="max-width.html">Simple vertical stack of elements</a> (a basic layout suitable for many things); there's also a <a href="max-width2.html">variant version</a> that allows the photo to go full width on a phone</li>
+	<li><a href="breakpoints.html">Basic breakpoints example</a> (uses CSS grid; had TWO media queries)</li>
+	<li><a href="flex_shrink_grow.html">Flexbox example</a> (uses CSS flex)</li>
+</ul>
+
+<img src="images/two_options_half.png" alt="Screenshots of two ways to handle image width">
+
+<p class="caption">Above left: <a href="max-width2.html">Variant version</a> for styling a simple vertical stack of elements. Above right: <a href="max-width.html">Standard version</a> for styling a simple vertical stack of elements. The only difference is in the media queries.</p>
+
+<h2>Controlling Margins and Padding</h2>
+
+<p>I have found that using as few declarations as possible for <code>margin</code> and <code>padding</code> is a great help. We often need to adjust <code>margin</code> and <code>padding</code> in the media queries, so the less we need to change, the easier it is. In some cases, for a simple vertical stack of elements, we won't need any left/right <code>padding</code> or <code>padding</code> at all &mdash; <em>except</em> in the rule for <code>body</code>.</p>
+
+<p>As a rule of thumb, get the page laid out and behaving as you want it to behave without changing any <code>margin</code> or <code>padding</code>. Then try and see whether you can solve all the issues by changing only the rule for <code>body</code>. If you have a container or wrapper element of some kind on the page, trying styling that next. Sometimes you will find it helpful to add such an element for precisely this purprose. A container can be a <code>div</code>, an <code>article</code> or a <code>section</code>. It might be your grid or flexbox container.</p>
+
+<h2>Readability Test</h2>
+
+<p>For optimal readability, line lengths should not <em>exceed</em> 60 to 70 characters. The following line helps us test that quickly.</p>
+
+<p>0123456789 0123456789 0123456789 0123456789 0123456789 0123456789 0123456789</p>
+
+
+</body>
+</html>

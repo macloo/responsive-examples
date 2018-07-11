@@ -1,0 +1,69 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+body {
+    font-family: sans-serif;
+    color: #333;
+    background: #e0cabe;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+h1, h2 {
+    margin: 0;
+    margin-bottom: 1em;
+}
+h1 {
+    background: #333;
+    color: #fcf4ef;
+    padding: 1em;
+    letter-spacing: .08rem;
+}
+article {
+    max-width: 600px;
+    /* this centers the article */
+    margin: auto;
+}
+.caption {
+    background: #c9ffee;
+    margin: 0;
+    padding: 1rem;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+/* pseudo classes */
+a {
+    color: #3e988e;
+    font-weight: bold;
+}
+a:hover {
+    color: #72512d;
+    text-decoration: none;
+}
+
+/* ----- media queries ----- */
+@media screen and (max-width: 700px) {
+    /*
+    article {
+        margin: 1rem;
+    }
+    */
+    /* to achieve a different width on the photo and its caption,
+        allowing them to go full width on small screens
+        */
+    h2, p {
+        margin: 1rem;
+    }
+    /* make sure all text aligns on the left side.
+        can't use margin here, or there would be space
+        around the dark-gray box containing the h1 text
+        */
+    h1 {
+        padding: 1rem;
+    }
+}

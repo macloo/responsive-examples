@@ -1,0 +1,55 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+body {
+    font-family: sans-serif;
+    color: #333;
+    background: #b2988a;
+    margin: 2rem;
+}
+h1 {
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+/* flex container */
+#container1 {
+    height: auto;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* flex items - these are all SVG images */
+img {
+    width: 40px;
+    height: auto;
+    padding: .4rem;
+    flex: 1 1 auto;
+}
+
+/* pseudo classes */
+a {
+    color: #72512d;
+}
+a:hover {
+    color: #f4cdb7;
+    text-decoration: none;
+}
+
+/* ----- media queries ----- */
+@media screen and (max-width: 700px) {
+    #container1 {
+        /* set the flex container to wrap at the smaller widths */
+        flex-wrap: wrap;
+    }
+    img {
+        /* good size for a phone screen */
+        width: 120px;
+        height: 120px;
+    }
+}

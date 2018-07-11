@@ -1,0 +1,78 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+body {
+    font-family: sans-serif;
+    color: #333;
+    background: #b2988a;
+    margin: 2rem;
+}
+h1, h2 {
+    margin: 0;
+    margin-bottom: 1em;
+}
+p {
+    line-height: 1.4em;
+}
+code {
+    font-family: monospace;
+    font-size: 1.4rem;
+    background: #e0cabe;
+}
+
+/* grid container */
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    /* the grid will not get wider than 1280px - the full width of
+        many laptop screens */
+    max-width: 1280px;
+    /* below I compensate for a 1rem right margin on all grid items */
+    margin-right: -1rem;
+}
+
+/* all grid items */
+article {
+    border: 1px solid #333;
+    background: #9cfff9;
+    margin: 0 1rem 1rem 0;
+    padding: 1rem;
+}
+
+/* ----- media queries ----- */
+
+/* many laptop screens are 1280px wide.
+    desktop screens can be much wider - 1920px or even more
+    the resolution of a high-res screen (e.g. Retina) is not the
+    measurement we use for width. For example, when I take a
+    screenshot it is 2560 × 1600, but for responsive breakpoints,
+    my Mac Retina screen -responds- at 1280px.
+    */
+
+/* media queries must come BELOW everything else */
+
+/* if you change max- to min- in the FIRST media query here,
+    the 3-column version will appear only when
+    width is BETWEEN 900 and 600 pixels wide.
+    That would be weird, but you could use it in other situations.
+   */
+@media screen and (max-width: 950px) {
+    #grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #grid-container {
+        grid-template-columns: 1fr;
+    }
+    body {
+        margin: 1rem;
+    }
+}
