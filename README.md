@@ -1,6 +1,6 @@
 # Responsive Web Design Examples
 
-[Open the index to the examples.](TK)
+[Open the index to the examples.](https://macloo.github.io/responsive-examples/)
 
 This is a small collection of simple pages that can be tested on various devices. Each page has its own stand-alone CSS file for easy copying.
 
