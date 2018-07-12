@@ -1,0 +1,123 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+body {
+    font-family: sans-serif;
+    color: #333;
+    background: #b2988a;
+    margin: 2rem;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* grid container */
+#my-container {
+    margin: 0;
+    margin-right: -1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 200px) 1fr 1fr;
+    grid-template-rows: 150px auto auto 100px;
+    /* make SURE you have the correct number of words in each row
+        to match the exact number of COLUMNS
+        above and below, we have 5 columns and 4 rows
+        */
+    grid-template-areas:
+        "header header header header header"
+        "stuff1 stuff2 stuff3 main main"
+        "aside aside aside stuff4 stuff5"
+        "footer footer footer footer footer";
+}
+
+/* all grid items */
+.box {
+    border: 2px solid #fff9f3;
+    margin: 0 1rem 1rem 0;
+    padding: 1rem;
+}
+
+/* unique grid items - EACH must specify a grid-area */
+header {
+    grid-area: header;
+}
+footer {
+    grid-area: footer;
+}
+#stuff1 {
+    grid-area: stuff1;
+}
+#stuff2 {
+    grid-area: stuff2;
+}
+#stuff3 {
+    grid-area: stuff3;
+}
+#stuff4 {
+    grid-area: stuff4;
+}
+#stuff5 {
+    grid-area: stuff5;
+}
+main {
+    grid-area: main;
+}
+aside {
+    grid-area: aside;
+}
+
+/* pseudo classes */
+a {
+    color: #7c6a60;
+}
+a:hover {
+    color: #f4cdb7;
+    text-decoration: none;
+}
+
+/* ----- media queries ----- */
+
+@media screen and (max-width: 1000px) {
+    #my-container {
+        grid-template-columns: 1fr 1fr 200px;
+        grid-template-rows: 150px repeat(5, auto) 100px;
+        /* make SURE you have the correct number of words in each row
+            to match the exact number of COLUMNS
+            above and below, we have 3 columns and 7 rows
+            */
+        grid-template-areas:
+            "header header header"
+            "main main stuff1"
+            "main main stuff2"
+            "main main stuff3"
+            "aside aside stuff4"
+            "aside aside stuff5"
+            "footer footer footer";
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 1rem;
+    }
+    #my-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px repeat(5, auto) 100px;
+        /* make SURE you have the correct number of words in each row
+            to match the exact number of COLUMNS
+            above and below, we have 3 columns and 7 rows
+            */
+        grid-template-areas:
+            "header header"
+            "stuff1 stuff2"
+            "main main"
+            "stuff3 ."
+            "aside aside "
+            "stuff4 stuff5"
+            "footer footer";
+    }
+}
